@@ -371,31 +371,6 @@ void pri(long long x)
 		GCD.push_back(x);
 }
 
-void solve()
-{
-	int i;
-	std::cin >> n >> a >> b;
-	for (i = 1; i <= n; i++)
-		std::cin >> val[i];
-	pri(val[1]);
-	pri(val[1] + 1);
-	pri(val[1] - 1);
-	pri(val[n]);
-	pri(val[n] + 1);
-	pri(val[n] - 1);
-	std::sort(GCD.begin(), GCD.end());
-	GCD.erase(std::unique(GCD.begin(), GCD.end()), GCD.end());
-	long long  ans = INF, sz = GCD.size();
-	for (i = 0; i < sz; i++)
-		ans = std::min(ans, calculation(GCD[i]));
-	std::cout << ans << std::endl;
-}
-
-void _623B()
-{
-	solve();
-}
-
 void _1350A()
 {
 	int t, n, k;
