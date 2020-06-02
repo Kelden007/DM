@@ -561,6 +561,137 @@ void _1076B()
 	std::cout << 1;
 }
 
+void _1051B()
+{
+	long long l, r;
+	std::cin >> l >> r;
+	if (l != r)
+	{
+		std::cout << "YES" << std::endl;
+		for (long long i = l; i <= r; i += 2) std::cout << i << " " << i + 1 << std::endl;
+	}
+	else std::cout << "NO";
+}
+
+void _946B()
+{
+	long long a, b;
+	std::cin >> a >> b;
+	while (true)
+	{
+		if (a == 0 || b == 0) break;
+		if (a >= 2 * b) { a %= 2 * b; continue; }
+		if (b >= 2 * a) { b %= 2 * a; continue; }
+		break;
+	}
+	std::cout << a << " " << b;
+}
+
+void _919B()
+{
+	int k, num(0);
+	std::cin >> k;
+	while (k)
+	{
+		num++;
+		int sum = 0;
+		int tmp = num;
+		while (tmp)
+		{
+			sum += tmp % 10;
+			tmp /= 10;
+		}
+		if (sum == 10) k--;
+	}
+	std::cout << num;
+}
+
+void _858A()
+{
+	int k; long long n, kn;
+	std::cin >> n >> k;
+	long long inc = 1;
+	for (int i = 0; i < k; i++) inc *= 10;
+	kn = n * inc / gcd2(n, inc);
+	std::cout << kn;
+}
+
+void _762A()
+{
+	long long n, k, lastdel;
+	bool sqr = false;
+	std::cin >> n >> k;
+	for (long long i = 1; i * i <= n; i++)
+	{
+		if (n % i == 0)
+		{
+			k--;
+			lastdel = i;
+			if (i * i == n) sqr = true;
+			if (k == 0)
+			{
+				std::cout << i;
+				return;
+			}
+		}
+	}
+	for (long long i = lastdel; i > 0; i--)
+	{
+		if (sqr == true)
+		{
+			i--;
+			if (i == 0) break;
+			sqr = false;
+		}
+		if (n % i == 0)
+		{
+			k--;
+			if (k == 0)
+			{
+				std::cout << n / i;
+				return;
+			}
+		}
+	}
+	if (k > 0) std::cout << -1;
+}
+
+void _742A()
+{
+	int n, fi_10(4), num(1);
+	std::cin >> n;
+	if (n == 0)
+	{
+		std::cout << num;
+		return;
+	}
+	for (int i = 0; i < n % fi_10 + 4; i++) num *= 8;
+	std::cout << num % 10;
+}
+
+void _630A()
+{
+	long long n;
+	std::cin >> n;
+	std::cout << 25;
+}
+
+void _630J()
+{
+	long long lcm(1), n;
+	std::cin >> n;
+	for (long long i = 2; i <= 10; i++) lcm = lcm * i / gcd2(lcm, i);
+	std::cout << n / lcm;
+}
+
+void _630K()
+{
+	long long n, del;
+	std::cin >> n;
+	del = n / 2 + n / 3 + n / 5 + n / 7 - n / 6 - n / 10 - n / 14 - n / 15 - n / 21 - n / 35 + n / 30 + n / 42 + n / 70 + n / 105 - n / 210;
+	std::cout << n - del;
+}
+
 int main()
 {
 	//_1325A();
@@ -574,5 +705,14 @@ int main()
 	//_1238A();
 	//_1349A();
 	//_1068B();
-	_1076B();
+	//_1076B();
+	//_1051B(); 
+	//_946B();
+	//_919B();
+	//_858A();
+	//_762A();
+	//_742A();
+	//_630A();
+	//_630J();
+	//_630K();
 }
