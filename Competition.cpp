@@ -573,39 +573,6 @@ void _1051B()
 	else std::cout << "NO";
 }
 
-void _946B()
-{
-	long long a, b;
-	std::cin >> a >> b;
-	while (true)
-	{
-		if (a == 0 || b == 0) break;
-		if (a >= 2 * b) { a %= 2 * b; continue; }
-		if (b >= 2 * a) { b %= 2 * a; continue; }
-		break;
-	}
-	std::cout << a << " " << b;
-}
-
-void _919B()
-{
-	int k, num(0);
-	std::cin >> k;
-	while (k)
-	{
-		num++;
-		int sum = 0;
-		int tmp = num;
-		while (tmp)
-		{
-			sum += tmp % 10;
-			tmp /= 10;
-		}
-		if (sum == 10) k--;
-	}
-	std::cout << num;
-}
-
 void _858A()
 {
 	int k; long long n, kn;
@@ -654,19 +621,6 @@ void _762A()
 		}
 	}
 	if (k > 0) std::cout << -1;
-}
-
-void _742A()
-{
-	int n, fi_10(4), num(1);
-	std::cin >> n;
-	if (n == 0)
-	{
-		std::cout << num;
-		return;
-	}
-	for (int i = 0; i < n % fi_10 + 4; i++) num *= 8;
-	std::cout << num % 10;
 }
 
 void _630A()
