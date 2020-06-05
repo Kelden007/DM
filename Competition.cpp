@@ -583,53 +583,6 @@ void _858A()
 	std::cout << kn;
 }
 
-void _762A()
-{
-	long long n, k, lastdel;
-	bool sqr = false;
-	std::cin >> n >> k;
-	for (long long i = 1; i * i <= n; i++)
-	{
-		if (n % i == 0)
-		{
-			k--;
-			lastdel = i;
-			if (i * i == n) sqr = true;
-			if (k == 0)
-			{
-				std::cout << i;
-				return;
-			}
-		}
-	}
-	for (long long i = lastdel; i > 0; i--)
-	{
-		if (sqr == true)
-		{
-			i--;
-			if (i == 0) break;
-			sqr = false;
-		}
-		if (n % i == 0)
-		{
-			k--;
-			if (k == 0)
-			{
-				std::cout << n / i;
-				return;
-			}
-		}
-	}
-	if (k > 0) std::cout << -1;
-}
-
-void _630A()
-{
-	long long n;
-	std::cin >> n;
-	std::cout << 25;
-}
-
 void _630J()
 {
 	long long lcm(1), n;
@@ -664,9 +617,7 @@ int main()
 	//_946B();
 	//_919B();
 	//_858A();
-	//_762A();
 	//_742A();
-	//_630A();
 	//_630J();
 	//_630K();
 }
