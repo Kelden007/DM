@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstdio>
 #include <algorithm>
+#include <random>
 
 int gcd1(int a, int b)
 {
@@ -599,6 +600,121 @@ void _630K()
 	std::cout << n - del;
 }
 
+void _75C()
+{
+	int a, b, n, low, high, gcd;
+	std::cin >> a >> b >> n;
+	int* result = new int[n];
+	gcd = gcd1(a, b);
+	for (int i = 0; i < n; i++)
+	{
+		result[i] = -1;
+		std::cin >> low >> high;
+		if (low <= gcd && gcd <= high) 
+			result[i] = gcd;
+		else
+		{
+			int j;
+			if (gcd - 1 > high) 
+				j = high;
+			else 
+				j = gcd - 1;
+			for (j; j * j >= gcd, j >= low; j--)
+				if (gcd % j == 0)
+				{
+					result[i] = j;
+					break;
+				}
+		}
+	}
+	for (int i = 0; i < n; i++) 
+		std::cout << result[i] << std::endl;
+}
+
+const int max_n = 100001;
+int arr[max_n], index[max_n], result[max_n];
+
+void _1198F()
+{
+	int n;
+	srand(232142414);
+	std::cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		std::cin >> arr[i];
+		index[i] = i;
+	}
+	for (int it = 0; it < 100; it++) // 100 итераций вполне хватает чтобы уложиться во время и отсортировать элементы
+	{
+		std::random_shuffle(index, index + n); //раскидываем индексы случайно, чтобы работать каждый раз в разном порядке
+		int x = 0, y = 0; //начальные значения НОД массивов (0 элементов проверено)
+		for (int i = 0; i < n; i++)
+		{
+			int t = gcd1(x, arr[index[i]]); //новое значение НОД по сравнению с НОД старого массива
+			if (t != x) //1 массив
+			{
+				x = t; //переобозначение
+				result[index[i]] = 1;
+			}
+			else //2 массив
+			{
+				y = gcd1(y, arr[index[i]]); //переобозначение
+				result[index[i]] = 2;
+			}
+		}
+		if (x == 1 && y == 1) //после очередной операции НОД обоих массивов 1
+		{
+			std::cout << "YES" << std::endl;
+			for (int i = 0; i < n; i++) std::cout << result[i] << " ";
+		}
+	}
+	std::cout << "NO";
+}
+
+void _271B()
+{
+	int n, m, min(1000000), curr;
+	int primes[9593];
+	int* prime_to_go = new int[100003];
+	for (int i = 0; i <= 9592; i++) primes[i] = 0;
+	for (int i = 0; i <= 100003; i++) prime_to_go[i] = 1;
+	int k = 0;
+	for (long long i = 2; i <= 100003; i++)
+	{
+		if (prime_to_go[i] != 0)
+		{
+			primes[k] = i;
+			k++;
+		}
+		for (long long j = i * i; j <= 100003; j += i) prime_to_go[j] = 0;
+	}
+	k = 0;
+	for (int i = 1; i <= 100000; i++)
+	{
+		prime_to_go[i] = primes[k] - i;
+		if (primes[k] - i == 0) k++;
+	}
+	std::cin >> n >> m;
+	int** arr = new int* [n];
+	for (int i = 0; i < n; i++) arr[i] = new int[m];
+	for (int i = 0; i < n; i++) for (int j = 0; j < m; j++) std::cin >> arr[i][j];
+	for (int i = 0; i < n; i++)
+	{
+		curr = 0;
+		for (int j = 0; j < m; j++) 
+			curr += prime_to_go[arr[i][j]];
+		if (curr < min) min = curr;
+	}
+	for (int i = 0; i < m; i++)
+	{
+		curr = 0;
+		for (int j = 0; j < n; j++) 
+			curr += prime_to_go[arr[j][i]];
+		if (curr < min) min = curr;
+	}
+	std::cout << min;
+}
+
 int main()
 {
 	//_1325A();
@@ -620,4 +736,7 @@ int main()
 	//_742A();
 	//_630J();
 	//_630K();
+	//_75C();
+	//_1198F();
+	//_271B();
 }
