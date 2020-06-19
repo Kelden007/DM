@@ -3,70 +3,8 @@
 #include <cstdio>
 #include <algorithm>
 #include <random>
-
-int gcd1(int a, int b)
-{
-    int nod = 1;
-    int tmp;
-    if (a == 0) return b;
-    if (b == 0) return a;
-    if (a == b)  return a;
-    if (a == 1 || b == 1) return 1;
-    while (a != 0 && b != 0)
-    {
-        if (a % 2 == 0 && b % 2 == 0)
-        {
-            nod *= 2;
-            a /= 2;
-            b /= 2;
-            continue;
-        }
-        if (a % 2 == 0 && b % 2 != 0)
-        {
-            a /= 2;
-            continue;
-        }
-        if (a % 2 != 0 && b % 2 == 0)
-        {
-            b /= 2;
-            continue;
-        }
-        if (a > b)
-        {
-            tmp = a;
-            a = b;
-            b = tmp;
-        }
-        tmp = a;
-        a = (b - a) / 2;
-        b = tmp;
-    }
-    if (a == 0) return nod * b;
-    else return nod * a;
-}
-
-long long gcd2(long long a, long long b)
-{
-	while (true)
-	{
-		if (a == 0) return b;
-		if (b == 0) return a;
-		if (a >= b) a = a % b;
-		else b = b % a;
-	}
-}
-
-void _1325A()
-{
-	long t, x;
-	std::cin >> t;
-
-	for (int i = 0; i < t; ++i)
-	{
-		std::cin >> x;
-		std::cout << std::endl << 1 << std::endl << x - 1 << std::endl;
-	}
-}
+#include <cmath>
+#include "1325A.h"
 
 void _664A()
 {
@@ -715,6 +653,58 @@ void _271B()
 	std::cout << min;
 }
 
+int cache[100];
+
+int fibo(int n)
+{
+	if (cache[n] == 0)
+	{
+		if (n == 0)
+			cache[n] = 0;
+		else if (n == 1 || n == 2)
+			cache[n] = 1;
+		else
+			cache[n] = fibo(n - 1) + fibo(n - 2);
+	}
+	return cache[n];
+}
+
+int Fib(int place)
+{
+	int old_value = 0;
+	int value = 1;
+	int temp;
+	if (place < 1)
+		return 0;
+	for (int n = 1; n < place; ++n)
+	{
+		temp = value;
+		value += old_value;
+		old_value = temp;
+	}
+	return value;
+}
+
+int fib(int n)
+{
+	switch (n)
+	{
+	case 0: 
+		return 1;
+	case 1: 
+		return 1;
+	default: 
+		return fib(n - 1) + fib(n - 2);
+	}
+}
+
+void _72G()
+{
+	int n;
+	std::cin >> n;
+	std::cout << fib(n);
+}
+
 int main()
 {
 	//_1325A();
@@ -739,4 +729,5 @@ int main()
 	//_75C();
 	//_1198F();
 	//_271B();
+	//_72G();
 }

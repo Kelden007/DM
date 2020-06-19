@@ -147,7 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="1325A.cpp" />
     <ClCompile Include="Competition.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="1325A.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

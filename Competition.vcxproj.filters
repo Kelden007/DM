@@ -13,10 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Tasks">
+      <UniqueIdentifier>{61bb7120-4ee2-44b1-8a57-3fc8009bee97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Tasks">
+      <UniqueIdentifier>{9871464d-29a8-4505-a2dc-17fd2020e867}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Competition.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="1325A.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="1325A.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
