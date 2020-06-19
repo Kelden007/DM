@@ -27,10 +27,121 @@
     <ClCompile Include="1325A.cpp">
       <Filter>Исходные файлы\Tasks</Filter>
     </ClCompile>
+    <ClCompile Include="664A.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="798C.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1228C.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="199A.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1350A.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1238A.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1285C.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1108B.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1349A.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1068B.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1076B.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1051B.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="858A.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="630J.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="630K.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="1198F.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="271B.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="72G.cpp">
+      <Filter>Исходные файлы\Tasks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1325A.h">
       <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="664A.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="798C.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1228C.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="199A.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1350A.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1238A.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1285C.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1108B.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1349A.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1076B.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1051B.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="858A.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="630J.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1068B.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="630K.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="1198F.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="271B.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="72G.h">
+      <Filter>Файлы заголовков\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="task.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

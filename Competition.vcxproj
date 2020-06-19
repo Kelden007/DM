@@ -147,11 +147,48 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="1051B.cpp" />
+    <ClCompile Include="1068B.cpp" />
+    <ClCompile Include="1076B.cpp" />
+    <ClCompile Include="1108B.cpp" />
+    <ClCompile Include="1198F.cpp" />
+    <ClCompile Include="1228C.cpp" />
+    <ClCompile Include="1238A.cpp" />
+    <ClCompile Include="1285C.cpp" />
     <ClCompile Include="1325A.cpp" />
+    <ClCompile Include="1349A.cpp" />
+    <ClCompile Include="1350A.cpp" />
+    <ClCompile Include="199A.cpp" />
+    <ClCompile Include="271B.cpp" />
+    <ClCompile Include="630J.cpp" />
+    <ClCompile Include="630K.cpp" />
+    <ClCompile Include="664A.cpp" />
+    <ClCompile Include="72G.cpp" />
+    <ClCompile Include="798C.cpp" />
+    <ClCompile Include="858A.cpp" />
     <ClCompile Include="Competition.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="1051B.h" />
+    <ClInclude Include="1068B.h" />
+    <ClInclude Include="1076B.h" />
+    <ClInclude Include="1108B.h" />
+    <ClInclude Include="1198F.h" />
+    <ClInclude Include="1228C.h" />
+    <ClInclude Include="1238A.h" />
+    <ClInclude Include="1285C.h" />
     <ClInclude Include="1325A.h" />
+    <ClInclude Include="1349A.h" />
+    <ClInclude Include="1350A.h" />
+    <ClInclude Include="199A.h" />
+    <ClInclude Include="271B.h" />
+    <ClInclude Include="630J.h" />
+    <ClInclude Include="630K.h" />
+    <ClInclude Include="664A.h" />
+    <ClInclude Include="72G.h" />
+    <ClInclude Include="798C.h" />
+    <ClInclude Include="858A.h" />
+    <ClInclude Include="task.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
